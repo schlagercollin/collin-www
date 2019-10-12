@@ -21,7 +21,7 @@ class ModularDesign {
         this.scene = new THREE.Scene();
         this.renderer = new THREE.WebGLRenderer( { canvas: this.canvas });
         
-        this.camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight,
+        this.camera = new THREE.PerspectiveCamera( 45, canvas.width / canvas.height,
             0.1, 1000);
 
         this.controls = new THREE.OrbitControls( this.camera, this.renderer.domElement );

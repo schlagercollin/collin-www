@@ -3,14 +3,13 @@ var scene = new THREE.Scene();
 var canvasDiv = document.getElementById("lorenzCanvasDiv");
 var canvas = document.getElementById("lorenzCanvas");
 
-// canvas.height = canvasDiv.clientHeight;
 canvas.height = 500;
 canvas.width = canvasDiv.clientWidth;
 
 var renderer = new THREE.WebGLRenderer({ canvas: canvas });
 
-var camera = new THREE.PerspectiveCamera( 45, window.innerWidth /
- window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 45, canvas.width /
+ canvas.height, 0.1, 1000 );
 
 camera.position.set( 0, 0, 100 );
 
