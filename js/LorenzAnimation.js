@@ -3,7 +3,8 @@ var scene = new THREE.Scene();
 var canvasDiv = document.getElementById("lorenzCanvasDiv");
 var canvas = document.getElementById("lorenzCanvas");
 
-canvas.height = canvasDiv.clientHeight;
+// canvas.height = canvasDiv.clientHeight;
+canvas.height = 500;
 canvas.width = canvasDiv.clientWidth;
 
 var renderer = new THREE.WebGLRenderer({ canvas: canvas });
