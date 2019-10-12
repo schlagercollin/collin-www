@@ -25,6 +25,7 @@
 
 <body id="page-top">
 
+  <!-- Navigation Side Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Collin Schlager</span>
@@ -52,6 +53,7 @@
 
   <div class="container-fluid p-0">
 
+    <!-- Main Resume Text -->
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
         <h1 class="mb-0">Collin
@@ -81,22 +83,36 @@
 
     <hr class="m-0">
 
+    <!-- Lorenz Strange Attractor -->
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="lorenz">
       <div class="w-100">
         <h2 class="mb-3">Strange...</h2>
+        <p class="lead mb-5">
+            \begin{align}
+              \frac{\mathrm{d}x}{\mathrm{d}t} = \sigma (y - x),
+              \frac{\mathrm{d}y}{\mathrm{d}t} = x (\rho - z) - y,
+              \frac{\mathrm{d}z}{\mathrm{d}t} = x y - \beta z.
+            \end{align}
+        </p>
         <div style="width: 100%; height: 100%;" id="lorenzCanvasDiv">
-            <canvas id="lorenzCanvas">
+            <canvas id="lorenzCanvas" />
         </div>
-      <div>
+      </div>
     </section>
 
 	<hr class="m-0">
 
+    <!-- Modular Lines Animation -->
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="modular">
       <div class="w-100">
         <h2 class="mb-3">Symmetry by Modularity</h2>
+        <p class="lead mb-5">
+            \begin{align}
+              \{n_i \mapsto n_{f(i,t)} | f(i,t) \equiv_{\text{#dots}} i \cdot t \}
+            \end{align}
+        </p>
         <div style="width: 100%; height: 100%;" id="modularCanvasDiv">
-            <canvas id="modularCanvas">
+            <canvas id="modularCanvas" />
         </div>
       </div>
 
@@ -119,11 +135,14 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
-  <script src="js/modularDesign.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <!-- Animation Scripts -->
   <script src="js/three.js"></script>
   <script src="js/OrbitControls.js"></script>
   <script src="js/LorenzAnimation.js"></script>
+  <script src="js/modularDesign.js"></script>
 
 </body>
 

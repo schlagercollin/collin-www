@@ -74,8 +74,6 @@ class ModularDesign {
 
 }
 
-var design;
-
 $( document ).ready(function() {
 
     var mod_canvasDiv = document.getElementById("modularCanvasDiv");

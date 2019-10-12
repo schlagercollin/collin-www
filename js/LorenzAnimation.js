@@ -110,7 +110,7 @@ var animate = function() {
 
     setTimeout( function() {
         requestAnimationFrame( animate );
-    }, 1000 / 100 );
+    }, 1000 / 20 );
 
     drawCount = ( drawCount + 5 ) % MAX_POINTS;
 
